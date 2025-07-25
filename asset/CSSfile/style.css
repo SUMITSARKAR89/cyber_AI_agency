@@ -8,15 +8,21 @@ font-family: "Host Grotesk", sans-serif; */
      --primary-bg: #000000;
      --card-bg: #0D0D0D;
      
+
+     --text-wht: #ffffff;
+     --text-wht-deep: #cecece;
      
      
   
      /* gradient color  */
      
-     --gradient-1: linear-gradient(120deg,  #7a93b808, #7a93b826);
-     --gradient-2: #7a93b81A;
-     --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
+     
      --gradient-4:  linear-gradient(-50deg, #000000f3 60%, #2e2d2d 150%);
+     --gradient-text:  linear-gradient(to bottom, #666666, #222222);
+
+      /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+
      
     
      /*others color*/
@@ -31,18 +37,18 @@ font-family: "Host Grotesk", sans-serif; */
      
  
       /* fontsize  */
-      --font-h1:;
-      --font-h2: ;
-      --font-h3: ;
-      --font-h4: ;
-      --font-h5: ;
+      --font-h1:4rem;
+      --font-h2: 3.5rem;
+      --font-h3:1.625rem ;
+      --font-h4:1.5rem ;
+      --font-h5:1.125rem  ;
 
 
-      --font-24:;
+      --font-24:1.5rem;
       --font-20: ;
-      --font-18: ;
-      --font-16: ;
-      --font-15: ;
+      --font-18:1.125rem ;
+      --font-16: 1rem;
+      --font-14: 0.875rem;
       
 
 
@@ -67,12 +73,7 @@ font-family: "Host Grotesk", sans-serif; */
 
  
      }
-     .card{
-    background: var(--gradient-4);
-    height: 500px;
-    width: 300px;
-    position: relative;
-    }
+     
      
      /* ----------------------------------------
        ============= reset css  ==============
@@ -113,6 +114,7 @@ font-family: "Host Grotesk", sans-serif; */
         border-radius: 15px;
         padding: 10px 25px;
         text-transform: capitalize;
+        font-size: var(--font-16);
         border: 1px solid transparent;
 
      }
@@ -139,8 +141,11 @@ font-family: "Host Grotesk", sans-serif; */
          position: relative;
          transition:  all 0.5s ease-in-out;
          overflow-X: hidden; 
+         font-size: var(--font-16);
+         color: var(--text-wht);
          animation: fadeed 0.5s ease-in-out;
          background: var(--primary-bg);
+         font-family: "Inter", sans-serif;
      }
      
 
@@ -168,6 +173,7 @@ font-family: "Host Grotesk", sans-serif; */
      }
      h1,h2,h3,h4,h5{
       font-weight: var(--font-medium);
+      font-family: "Host Grotesk", sans-serif;
      }
 
      .font-24{
@@ -182,8 +188,8 @@ font-family: "Host Grotesk", sans-serif; */
      .font-16{
       font-size: var(--font-16);
      }
-     .font-15{
-        font-size: var(--font-15);
+     .font-14{
+        font-size: var(--font-14);
      }
  
      
@@ -269,3 +275,169 @@ font-family: "Host Grotesk", sans-serif; */
     /* <!-- =================================================
     --------------Header start here------------------
     =================================================   --> */
+
+
+header{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+}
+header .container{
+    margin: 5px 12%;
+}
+header .head{
+  
+    position: fixed;
+    width: 70%;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+    margin-top: 20px;
+    z-index: 100;
+}
+.head .logo{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 7px;
+     transition: var(--transition-1);
+
+}
+.logo img{
+    width: 30px;
+}
+.logo p{
+    color: var(--text-wht);
+    font-weight: 500;
+    text-transform: capitalize;
+   
+}
+.logo:hover{
+    opacity: 0.8;
+}
+
+  .headBtn{
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+   
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: #0D0D0D;
+    transition: var(--transition-2);
+    
+}
+.headBtn:hover{
+      
+      box-shadow: rgba(255, 217, 0, 0.267) 0px -2px 10px;
+}
+ .headBtn:hover::before{
+    animation: none;
+    transition: var(--transition-1);
+     background-image: conic-gradient(
+    #ffb30333 100deg,
+    #ffb30333 100deg
+  );
+  
+}
+.headBtn:hover::after{
+    box-shadow: rgba(246, 247, 248, 0.082) 0px 28px 24px;
+    background: #000;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.headBtn::before {
+  content: "";
+  background-image: conic-gradient(
+    #BA8811 20deg,
+    transparent 50deg
+  );
+  height: 250%;
+  width: 186%;
+  position: absolute;
+  top: -80%;
+  left: -43%;
+  animation: rotate 6s linear infinite;
+  transition: var(--transition-1);
+  
+  
+}
+
+
+.headBtn::after {
+  content: "Contact";
+  height: 95%;
+  width: 98%;
+  position: absolute;
+  background-color: #0D0D0D;
+  border-radius: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  color: white;
+  transition: var(--transition-1);
+  
+}
+
+/* ============nav==============  */
+nav{
+    width: 42%;
+    position: fixed;
+    padding: 10px ;
+    max-width: 100%;
+    top: 4%;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-bg);
+    border: 1px solid var(--card-bg);
+    
+}
+nav li{
+    position: relative;
+    max-width: 100%;
+}
+nav li a{
+    max-width: 100%;
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: var(--text-wht);
+    font-size: var(--font-16);
+    transition: var(--transition-1);
+}
+nav li a:hover{
+    border: 1px solid rgba(255, 217, 0, 0.116) ;
+    background: var(--card-bg);
+   
+  
+}
+
+
