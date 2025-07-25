@@ -271,6 +271,67 @@ font-family: "Host Grotesk", sans-serif; */
      position: relative;
      transition: var(--transition-1);
     }
+    .blur1{
+        width: 100%;
+        height: 60px;
+        
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: rgba(10, 10, 10, 0.11);
+        backdrop-filter: blur(5px);
+        z-index: 100;
+        border-radius: 10% 10% 0 0 ;
+        
+   
+    background: linear-gradient(to top, 
+        rgba(14, 13, 13, 0.25) 50%, 
+        rgba(22, 22, 22, 0.1) 80%, 
+        rgba(255, 255, 255, 0) 100%);
+    
+
+    }
+    .blur2{
+        width: 100%;
+        height: 90px;
+        
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: rgba(10, 10, 10, 0.11);
+        backdrop-filter: blur(1px);
+        z-index: 101;
+        border-radius: 5% 5% 0 0 ;
+        
+   
+        background: linear-gradient(to top, 
+        rgba(14, 13, 13, 0.062) 50%, 
+        rgba(8, 8, 8, 0.082) 80%, 
+        rgba(17, 17, 17, 0.103) 100%);
+    
+
+
+    }
+    .blur3{
+         width: 100%;
+        height: 120px;
+        
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: rgba(10, 10, 10, 0.11);
+        backdrop-filter: blur(0.2px);
+        z-index: 102;
+        border-radius: 50% 50% 0 0 ;
+        
+   
+        background: linear-gradient(to top, 
+        rgba(14, 13, 13, 0.062) 50%, 
+        rgba(8, 8, 8, 0.082) 80%, 
+        rgba(17, 17, 17, 0.103) 100%);
+
+    }
+    
 
     /* <!-- =================================================
     --------------Header start here------------------
@@ -280,8 +341,78 @@ font-family: "Host Grotesk", sans-serif; */
 header{
     position: relative;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+    height: 100vh;
     width: 100%;
+    background: url(https://framerusercontent.com/images/xLrX5WIDvtdiCfZom23YqmDAy8Y.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
 }
+.heroBg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 100%;
+
+}
+.heroBg .heroImg{
+    width: 480px;
+    height: 480px;
+}
+.heroBg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: rotate 200s linear infinite;
+    
+
+}
+.color-cercle{
+    position: absolute;
+     width: 300px;
+    height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg,
+    #ff0000,
+    #ff9900,
+    #1d43eb,
+    #ffff00,
+    #ff0000,
+    #1d43eb
+  );
+  filter: blur(40px);
+  opacity: 0.7;
+   top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation: round 6s ease-in-out infinite alternate;
+     
+}
+@keyframes round {
+    from{
+        transform: rotate(0deg)  ;
+        
+    }
+    to{
+        transform: rotate(360deg)  ;
+    }
+    
+}
+
 header .container{
     margin: 5px 12%;
 }
@@ -371,6 +502,7 @@ header .head{
     #BA8811 20deg,
     transparent 50deg
   );
+   box-shadow: #BA8811 10px -28px 24px;
   height: 250%;
   width: 186%;
   position: absolute;
@@ -428,13 +560,15 @@ nav li a{
     background: transparent;
     padding: 10px 20px;
     border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     border-radius: 7px;
     color: var(--text-wht);
     font-size: var(--font-16);
     transition: var(--transition-1);
 }
 nav li a:hover{
-    border: 1px solid rgba(255, 217, 0, 0.116) ;
+    border: 1px solid rgba(255, 217, 0, 0.062) ;
+    border-bottom: 1px solid rgba(255, 217, 0, 0.185) ;
     background: var(--card-bg);
    
   
