@@ -17,3 +17,24 @@ closeMenu.addEventListener("click", () => {
      navigation.style.height = "0vh";
      
 });
+
+
+
+const forthBtns = document.querySelectorAll('.f-btn');
+const forthContents = document.querySelectorAll('.service-panel');
+
+forthBtns.forEach( (btn, index) => {
+    btn.addEventListener('click', () => {
+
+        forthBtns.forEach( btn => {
+            btn.classList.remove('f-active')
+        })
+        btn.classList.add('f-active');
+
+        forthContents.forEach(content => {
+            content.classList.remove('f-active');
+        })
+        forthContents[index].classList.add('f-active');
+
+    })
+})
