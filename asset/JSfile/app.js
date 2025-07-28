@@ -37,4 +37,17 @@ forthBtns.forEach( (btn, index) => {
         forthContents[index].classList.add('f-active');
 
     })
-})
+});
+
+
+const l = document.querySelector(".logo");
+const h = document.querySelector("#headBtn");
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 2000){
+        l.classList.add("active");
+        h.classList.add("active");
+    }else{
+        l.classList.remove("active");
+        h.classList.remove("active");
+    }
+});
