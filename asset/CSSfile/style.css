@@ -261,7 +261,9 @@ font-family: "Host Grotesk", sans-serif; */
  /* =====================ID section customizing=============== */
  #about,
  #service,
- #price{
+ #price,
+ #client,
+ #perform{
     max-width: 100%;
     position: relative;
  }
@@ -934,7 +936,9 @@ nav li a:hover{
     }
     #about h2,
     #service h2,
-    #price h2{
+    #price h2,
+    #client h2,
+    #perform h2{
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -956,7 +960,9 @@ nav li a:hover{
     #about h2 span,
     #service h2 span,
     .industry-card h2 span,
-    #price h2 span{
+    #price h2 span,
+    #client h2 span,
+    #perform h2 span{
       background: linear-gradient(to top, #888888, #dddddd); /* Adjust colors */
      -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent;
@@ -969,7 +975,9 @@ nav li a:hover{
     #about .font-16,
     #service .font-16,
     .industry-card .font-18,
-    #price .font-16{
+    #price .font-16,
+    #client .font-16,
+    #perform .font-16{
         max-width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -1857,6 +1865,301 @@ nav li a:hover{
 }
 
 
+ /* ====================client=========================== */
+ .client-content{
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 2% 4%;
+   display:flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 30px;
+   transition: var(--transition-1);
+ }
+ .client-content .client-title{
+    width: 70%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition-1);
+ }
+ .client-title img{
+    width: 70px;
+ }
+ .client-title .client-name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+ }
+ .client-name .font-18{
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--text-wht);
+ }
+ .client-name .font-14{
+    color: var(--text-wht-deep);
+ }
+ .client-content .client-info{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    transition: var(--transition-1);
+ }
+ .client-info q{
+    font-size: var(--font-h4);
+    color: var(--text-wht);
+    line-height: 35px;
+    font-weight: 500;
+
+ }
+  .client-info  .c-line{
+    width: 500px;
+    max-width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, rgb(17, 17, 17), rgba(255, 255, 255, 0.555), rgb(22, 22, 22));
+    border-radius: 20px;
+  }
+   .client-info .client-percentage{
+    max-width: 100%;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+ 
+   
+    gap: 25px;
+    transition: var(--transition-1);
+   }
+   .client-percentage .client-text{
+    width: 100%;
+    display: flex;
+    gap: 13px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+   }
+   .client-text span{
+    font-size: var(--font-h3);
+   }
+   .client-text p{
+    font-size: var(--font-16);
+    width: 60%;
+   }
+   .partner-container{
+    max-width: 100%;
+    
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3%;
+    gap: 20px;
+    
+    padding: 3% ;
+    transition: var(--transition-1);
+   
+   }
+   .partner-container .partner-card{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 5px;
+    border-radius: 10px;
+    transition: var(--transition-1);
+     box-shadow: rgba(48, 47, 47, 0.137) 0px 1px 4px;
+
+   }
+   .partner-card:hover{
+    box-shadow: rgba(214, 173, 36, 0.137) 0px 1px 4px
+
+   }
+   
+   
+   .partner-card img{
+    width: 50%;
+   }
+   .partner-card q{
+    font-size: var(--font-16);
+    line-height: 25px;
+    text-align: center;
+    color: var(--text-wht);
+   }
+   .partner-card li{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+   }
+   .partner-card li p:first-child{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--text-wht);
+    text-transform: capitalize;
+   }
+   .partner-card li p:last-child{
+    color: var(--text-wht-deep);
+    text-transform: capitalize;
+   }
+
+   /* ====================perform=========================== */
+   .perform-container{
+    max-width: 100%;
+    width: 100%;
+    padding: 2%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-1);
+   }
+   .perform-container .perform-card{
+    width: 100%;
+    max-width: 100%;
+   
+    transition: var(--transition-1);
+    height: auto;
+    position: relative;
+   }
+   .perform-card .performImg{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+   }
+   .performImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+    .perform-card .performImg-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: var(--transition-1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+   }
+   .perform-card:nth-child(2){
+    position: relative;
+    background: var(--gradient-4);
+    height: 100%;
+    padding: 1px;
+    border-radius: 15px;
+    border: 1px solid #ffffff1c;
+   }
+   .perform-card .perform-card-content{
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    transition: var(--transition-1);
+
+   }
+   .perform-card-content .perform-img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff18;
+    border-radius: 15px;
+    padding: 2px;
+   }
+   .perform-img img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+   }
+   .perform-card-content .perform-box{
+    padding: 25px ;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+    border-left: 2px solid #ffffff8c;
+    border-top: 2px solid #ffffff8c;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: var(--transition-1);
+    position: relative;
+    background: url(https://framerusercontent.com/images/V9RhDxGVj6Fi4k9bcIxoBNZv1qA.svg);
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+   .perform-box .font-18,
+   .performImg-info .font-18{
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: capitalize;
+    text-align: left;
+   }
+   .perform-box .font-14{
+    line-height: 25px;
+
+   }
+   .performImg-info .font-14{
+    margin-top: 115%;
+    line-height: 20px;
+    font-weight: 600;
+   }
+   .prfmNum-container{
+    max-width: 100%;
+    width: 100%;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    transition: var(--transition-1);
+   }
+   .prfmNum-container .prfm-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-1);
+
+   }
+    .prfm-card span{
+        font-size: var(--font-h2);
+        font-weight: 700;
+        color: var(--text-wht);
+        text-align: center;
+    }
+    .prfm-card p{
+        color: var(--text-wht-deep);
+        text-align: center;
+    }
+
    
 
     
@@ -1898,6 +2201,35 @@ nav li a:hover{
         left: 12%;
 
     }
+    .client-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .client-content .client-title{
+        width: 100%;
+        justify-content: center;
+    }
+    .client-content .client-info{
+        justify-content: center;
+        align-items: center;
+    }
+    .client-info q{
+        text-align: center;
+    }
+    .client-info .client-percentage,
+    .client-percentage .client-text{
+        justify-content: center;
+        align-items: center;
+           text-align: center;
+       
+    }
+    .client-text p{
+        width: 100%;
+    }
+    
+    
 
 }
 @media(max-width:1168px){
@@ -1965,6 +2297,31 @@ nav li a:hover{
         z-index: 2;
 
     }
+    .partner-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .perform-container{
+        grid-template-columns: 1fr;
+
+    }
+    .performImg-info .font-14{
+        margin-top: 20%;
+    }
+    .perform-card-content .perform-img{
+        height: 400px;
+    }
+    .perform-card .performImg{
+        height: 400px;
+    }
+    .prfmNum-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+
+    }
+    
+    
+    
     
     
 
@@ -2051,6 +2408,10 @@ nav li a:hover{
      .about-card .about-img{
         width: 30%;
     }
+    .partner-container{
+        grid-template-columns:  1fr;
+
+    }
 
 }
 @media(max-width:600px){
@@ -2059,5 +2420,8 @@ nav li a:hover{
     }
     .hero-conatainer p{
         width: 80%;
+    }
+    .prfmNum-container{
+        grid-template-columns: 1fr;
     }
 }
