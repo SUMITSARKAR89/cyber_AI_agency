@@ -263,7 +263,10 @@ font-family: "Host Grotesk", sans-serif; */
  #service,
  #price,
  #client,
- #perform{
+ #perform,
+ #team,
+ #contact,
+ #faq{
     max-width: 100%;
     position: relative;
  }
@@ -921,7 +924,8 @@ nav li a:hover{
     }
    
     .about-badge .dot,
-    .industry-badge .dot{
+    .industry-badge .dot,
+    .faq-badge .dot{
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -938,7 +942,9 @@ nav li a:hover{
     #service h2,
     #price h2,
     #client h2,
-    #perform h2{
+    #perform h2,
+    #team h2,
+    #contact h2{
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -947,6 +953,7 @@ nav li a:hover{
         text-align: center;
         color: var(--text-wht);
     }
+    
     .industry-card h2{
          max-width: 100%;
         display: flex;
@@ -962,7 +969,10 @@ nav li a:hover{
     .industry-card h2 span,
     #price h2 span,
     #client h2 span,
-    #perform h2 span{
+    #perform h2 span,
+    #team h2 span,
+    #contact h2 span,
+    .faq-left h2 span{
       background: linear-gradient(to top, #888888, #dddddd); /* Adjust colors */
      -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent;
@@ -977,12 +987,18 @@ nav li a:hover{
     .industry-card .font-18,
     #price .font-16,
     #client .font-16,
-    #perform .font-16{
+    #perform .font-16,
+    #team .font-16,
+    #contact .font-16{
         max-width: 100%;
         text-align: center;
         margin: 0 auto;
         margin-top: 20px;
         width: 55%;
+    }
+    .faq-left .font-16{
+        text-align: left;
+        margin-top: 20px ;
     }
     .industry-card .font-18{
         width: 100%;
@@ -2160,13 +2176,239 @@ nav li a:hover{
         text-align: center;
     }
 
+    /* =============================team section=================  */
+    .team-container{
+        
+        margin: 5% auto;
+        max-width: 100%;
+        width: 100%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        padding: 2%;
+        transition: var(--transition-1);
+    }
+    .team-container .team-card{
+        width: 100%;
+        max-width: 100%;
+        
+        position: relative;
+        padding: 25px;
+        border-top: 1px solid #ffffff7a;
+        border-right: 1px solid #ffffff7a;
+        border-left: 1px solid #ffffff3f;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: var(--transition-1);
+       
+
+    }
+    .team-card{
+         background: url(https://framerusercontent.com/images/V9RhDxGVj6Fi4k9bcIxoBNZv1qA.svg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .team-card:nth-child(2),
+    .team-card:nth-child(6){
+         background-position:top center ;
+
+    }
+    .team-card:nth-child(3),
+    .team-card:nth-child(4){
+        background-position:left bottom ;
+
+    }
+    .team-card:nth-child(5){
+        background-position:right bottom ;
+
+    }
+    .team-card .team-info{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3px;
+        flex-direction: column
+    }
+    .team-info .font-18{
+        color: var(--text-wht);
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .team-info .font16{
+        color: var(--text-wht-deep);
+    }
+    .team-card a{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        
+        color: var(--text-wht-deep);
+        padding: 10px;
+        font-size: var(--font-18);
+
+        background: var(--gradient-4);
+        border-radius: 50%;
+        border: 1px solid #ffffff25;
+        transition: var(--transition-1);
+    }
+    .team-card:hover a{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    
+    .team-card img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 1px;
+        border: 1px solid rgba(255, 217, 0, 0.185);
+    }
+
+    .form-container {
+        background: var(--gradient-4);
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(44, 43, 43, 0.116);
+        width: 70%;
+        margin: 5% auto;
+        border-top: 1px solid #ffffff1f;
+        border-left: 1px solid #ffffff1f;
+        max-width: 100%;
+    }
+    .contact-form .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+    .contact-form .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .contact-form label {
+        font-size: var(--font-16);
+        margin-bottom: 6px;
+        color: var(--text-wht-deep);
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #444;
+        padding: 10px 5px;
+        color: var(--text-wht);
+        font-size: var(--font-18);
+        outline: none;
+        width: 100%;
+        font-family: "Host Grotesk", sans-serif;
+    }
+    .contact-form select {
+        appearance: none;
+    }
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 80px;
+
+    }
+    .submit-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    button[type="submit"] {
+        background-color: transparent;
+        color: var(--text-wht);
+        border: 1px solid #444;
+        padding: 15px 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: var(--font-18)
+    }
+
+    button[type="submit"]:hover {
+        
+        color: #BA8811;
+        border: 1px solid #BA8811;
+    }
+
+    .submit-row p {
+        font-size: var(--font-18);
+        color: var(--text-wht);
+    }
+    select option{
+        
+        color: var(--card-bg);
+    }
+
+
+    /* =====================faq=========================  */
+    .faq-container{
+        max-width: 100%;
+        width: 100%;
+        padding: 3%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        transition: var(--transition-1);
+    }
+    .faq-container .faq-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .faq-left p{
+        width: 85%;
+    }
+    .faq-left .faq-badge{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #ffffff1f;
+        border-radius: 25px;
+        padding: 10px 25px;
+    }
+    .faq-container .faq-right{
+        width: 100%;
+        max-width: 100%;
+        background: var(--gradient-4);
+        padding: 30px;
+        border-radius: 20px 20px 10px 10px;
+        box-shadow: 0 0 20px rgba(44, 43, 43, 0.116);
+       
+        margin: 0 auto;
+        border-top: 2px solid #ffffff31;
+        border-left: 2px solid #ffffff31;
+       
+
+    }
+
    
 
     
    
 
 
-@media(max-width:1280px){
+@media(max-width:1282px){
     header .container{
         margin: 5px 8%;
         transition: var(--transition-2);
@@ -2228,6 +2470,10 @@ nav li a:hover{
     .client-text p{
         width: 100%;
     }
+    .team-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
     
     
 
@@ -2378,6 +2624,12 @@ nav li a:hover{
     .price-btn{
         left: 7%;
 
+    }.submit-row{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-container{
+        width: 90%;
     }
 
 }
@@ -2412,6 +2664,11 @@ nav li a:hover{
         grid-template-columns:  1fr;
 
     }
+    .team-container{
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+   
 
 }
 @media(max-width:600px){
