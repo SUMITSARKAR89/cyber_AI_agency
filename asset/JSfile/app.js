@@ -51,3 +51,13 @@ window.addEventListener('scroll', () => {
         h.classList.remove("active");
     }
 });
+
+
+
+const accFour = document.querySelectorAll('.acc-content');
+
+accFour.forEach( accs => {
+    accs.addEventListener("click", () => {
+        accs.classList.toggle("active");
+    })
+});
