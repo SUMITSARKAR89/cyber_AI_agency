@@ -61,3 +61,25 @@ accFour.forEach( accs => {
         accs.classList.toggle("active");
     })
 });
+
+
+
+ ScrollReveal({
+        // reset: true,
+        distance: "60px",
+        duration: 2500,
+        delay: 400
+        });
+
+        ScrollReveal().reveal('header, .about-badge', {delay: 200, origin: 'top'});
+        ScrollReveal().reveal('.head, nav, .hero-conatainer h1', { delay: 200, origin: 'top', interval: 100 });
+
+        ScrollReveal().reveal('.hero-badge, .price-foot-left h4, .client-title, .faq-left,  .line1', { delay: 300, origin: 'left' });
+        ScrollReveal().reveal('.font-24, .price-foot-left p, .prfm-card', { delay: 200, origin: 'left', interval: 100 });
+        ScrollReveal().reveal('.service-content, .industry-container, .price-foot-left a', { delay: 500, origin: 'left' });
+        
+        ScrollReveal().reveal('.marquee, video, .service-boxes, .industry-right, .price-card, .partner-card, .form-container, .team-card, .faq-right, .footerImg, .footer-links', {delay: 200, origin: 'bottom'});
+         ScrollReveal().reveal('.blur1, .blur2, .blur3, .about-card', { delay: 400, origin: 'bottom', interval: 200 });
+
+        ScrollReveal().reveal('.marquee-track, .monthBtn, .price-foot-right', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.video-content p, .client-info, .perform-card', { delay: 400, origin: 'right', interval: 200 });

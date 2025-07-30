@@ -1,0 +1,465 @@
+:root{
+     /* background color  */
+     --primary-bg: #000000;
+     --card-bg: #0D0D0D;
+     
+
+     --text-wht: #ffffff;
+     --text-wht-deep: #cecece;
+     
+     
+  
+     /* gradient color  */
+     
+     
+     --gradient-4:  linear-gradient(-50deg, #000000f3 60%, #2e2d2d 150%);
+     --gradient-text:  linear-gradient(to bottom, #666666, #222222);
+
+      /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+
+     
+    
+     /*others color*/
+     --scrollbar-color: #000000;
+     --scrollbar-thump:#ffffffb4;
+     --scrollbar-hover: #6f89b6;
+    
+     /* transition  */
+     --transition-1: 0.25s ease;
+     --transition-2: 0.3s ease;
+     --transition-3: 0.5s ease;
+     
+ 
+      /* fontsize  */
+      
+      --font-h1: 3.5rem;
+      --font-h2:3rem;
+      --font-h3:1.625rem ;
+      --font-h4:1.5rem ;
+      --font-h5:1.125rem  ;
+
+
+      --font-24:1.5rem;
+      --font-20: ;
+      --font-18:1.125rem ;
+      --font-16: 1rem;
+      --font-14: 0.875rem;
+      
+
+
+      /* font-weight  */
+      --font-bold:700;
+      --font-semi:600;
+      --font-medium:500;
+      --font-regular:400;
+      --font-light:300;
+
+      /* z-index  */
+      --z-minus:-1;
+      --z-zero:0;
+      --z-low:1;
+      --z-high:10;
+      --z-100:100;
+      --z-tooltop:1000;
+      --z-fix:1100;
+      --z-overlay:1110;
+      --z-modal:1990;
+      --z-max:9999;
+
+ 
+     }
+
+@media(max-width:1282px){
+     :root {
+    --font-h1: 3.25rem;
+    --font-h2: 2.75rem;
+    --font-h3: 1.5rem;
+    --font-h4: 1.375rem;
+    --font-h5: 1.0625rem;
+
+    --font-24: 1.375rem;
+    --font-20: 1.125rem;
+    --font-18: 1.0625rem;
+    --font-16: 0.9375rem;
+    --font-14: 0.8125rem;
+  }
+    header .container{
+        margin: 5px 8%;
+        transition: var(--transition-2);
+    }
+    header .head{
+        width: 80%;
+        transition: var(--transition-2);
+       
+        
+    }
+    .hero-conatainer .hero-badge{
+        width: 40%;
+    }
+    .service-container{
+        flex-direction: column;
+
+    }
+    .price-container{
+
+        grid-template-columns: 1fr;
+        padding: 20px 10%;
+        gap: 40px;
+    }
+    .price-container .price-card{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+    }
+    .price-footer{
+        padding: 20px 10%;
+    }
+    .price-btn{
+        left: 12%;
+
+    }
+    .client-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .client-content .client-title{
+        width: 100%;
+        justify-content: center;
+    }
+    .client-content .client-info{
+        justify-content: center;
+        align-items: center;
+    }
+    .client-info q{
+        text-align: center;
+    }
+    .client-info .client-percentage,
+    .client-percentage .client-text{
+        justify-content: center;
+        align-items: center;
+           text-align: center;
+       
+    }
+    .client-text p{
+        width: 100%;
+    }
+    .team-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .industry-container .industry-card{
+        width: 50%;
+        padding: 0 50px 30px 0 ;
+
+    }
+   
+    
+    
+
+}
+@media(max-width:1168px){
+    :root {
+    --font-h1: 3rem;
+    --font-h2: 2.5rem;
+    --font-h3: 1.4rem;
+    --font-h4: 1.25rem;
+    --font-h5: 1rem;
+
+    --font-24: 1.25rem;
+    --font-20: 1.0625rem;
+    --font-18: 1rem;
+    --font-16: 0.875rem;
+    --font-14: 0.75rem;
+  }
+    nav{
+        top: -100%;
+
+    }
+    header .head{
+        background: var(--primary-bg);
+        height: 70px;
+        padding: 0 20px;
+        border-radius: 15px;
+        border: 1px solid #ffffff0e;
+    
+        
+    }
+    #headBtn{
+        right: 10%;
+        top: 8px;
+        transition: var(--transition-2);
+    }
+    #menu{
+        right: 20px;
+    }
+    .hero-conatainer .hero-badge{
+        width: 50%;
+    }
+    #industry{
+       
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .index-container .industry-right{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px;
+        max-width: 100%;
+        
+    }
+    .industry-container .industry-card{
+        width: 100%;
+        padding: 0 50px 30px 0 ;
+
+    }
+    .industry-img{
+       
+        width: 96%;
+
+    }
+    .price-container .price-card{
+       flex-direction: row;
+    }
+    .price-footer{
+        flex-direction: column;
+
+    }
+    .price-footer .price-foot-right{
+        margin-top: 6%;
+    }
+    .price-btn{
+        bottom:50% ;
+        z-index: 2;
+
+    }
+    .partner-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .perform-container{
+        grid-template-columns: 1fr;
+
+    }
+    .performImg-info .font-14{
+        margin-top: 20%;
+    }
+    .perform-card-content .perform-img{
+        height: 400px;
+    }
+    .perform-card .performImg{
+        height: 400px;
+    }
+    .prfmNum-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+
+    }
+    .faq-container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .faq-container .faq-left{
+        justify-content: center;
+        align-items: center;
+
+    }
+    .faq-left h2{
+        text-align: center;
+    }
+    .faq-left .font-16{
+        text-align: center;
+        width: 100%;
+    }
+    
+    
+    
+    
+    
+
+
+}
+@media(max-width:998px){
+    :root {
+    --font-h1: 2.75rem;
+    --font-h2: 2.25rem;
+    --font-h3: 1.25rem;
+    --font-h4: 1.125rem;
+    --font-h5: 0.9375rem;
+
+    --font-24: 1.125rem;
+    --font-20: 1rem;
+    --font-18: 0.9375rem;
+    --font-16: 0.8125rem;
+    --font-14: 0.75rem;
+  }
+    #headBtn{
+        display: none;
+    }
+    .hero-conatainer .hero-badge{
+        width: 60%;
+    }
+    .hero-conatainer h1{
+        width: 80%;
+    }
+    .about-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video-content p{
+        width: 70%;
+    }
+    .video-card .font-24{
+        text-align: center;
+    }
+    .marquee{
+        width: 90%;
+    }
+    .industry-container .industry-card{
+         justify-content: center;
+        align-items: center;
+
+    }
+    .industry-card h2{
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+
+    }
+    .industry-card .font-18{
+        text-align: center;
+        padding-right: 0;
+    }
+    .about-card .about-img{
+        width: 40%;
+    }
+    .price-container{
+        padding: 30px;
+    }
+     .price-footer{
+        padding: 20px 5%;
+    }
+    .price-btn{
+        left: 7%;
+
+    }.submit-row{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .footer-body-card{
+        height: 100vh;
+    }
+     .footerLink{
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+    }
+    .footer-links:nth-child(2){
+        margin-left: 0;
+    }
+    .footer-links:nth-child(3){
+        margin-left: 0;
+    }
+    .footer-links .f-link{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    
+
+}
+@media(max-width:768px){
+     :root {
+    --font-h1: 2.25rem;
+    --font-h2: 2rem;
+    --font-h3: 1.125rem;
+    --font-h4: 1rem;
+    --font-h5: 0.875rem;
+
+    --font-24: 1rem;
+    --font-20: 0.9375rem;
+    --font-18: 0.875rem;
+    --font-16: 0.75rem;
+    --font-14: 0.6875rem;
+  }
+    .hero-conatainer .hero-badge{
+        width: 68%;
+    }
+    header .head{
+        background: none;
+        border: none;
+    }
+     .hero-conatainer h1{
+        width: 90%;
+    }
+    .hero-conatainer p{
+        width: 60%;
+    }
+    .about-container{
+        grid-template-columns: 1fr;
+
+    }
+    .video-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+    }
+     .video-content p{
+        text-align: center;
+        width: 90%;
+     }
+     .about-card .about-img{
+        width: 30%;
+    }
+    .partner-container{
+        grid-template-columns:  1fr;
+
+    }
+    .team-container{
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+    #menu{
+    
+    background: var(--primary-bg);
+    border: 1px solid rgba(175, 151, 11, 0.76);
+     
+
+}
+   
+   
+
+}
+@media(max-width:600px){
+    :root {
+    --font-h1: 2rem;
+    --font-h2: 1.75rem;
+    --font-h3: 1rem;
+    --font-h4: 0.9375rem;
+    --font-h5: 0.8125rem;
+
+    --font-24: 0.9375rem;
+    --font-20: 0.875rem;
+    --font-18: 0.8125rem;
+    --font-16: 0.75rem;
+    --font-14: 0.6875rem;
+  }
+     .hero-conatainer .hero-badge{
+        width: 90%;
+    }
+    .hero-conatainer p{
+        width: 80%;
+    }
+    .prfmNum-container{
+        grid-template-columns: 1fr;
+    }
+}
+     
